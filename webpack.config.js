@@ -36,8 +36,8 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(png|jpe?g|gif|svg)$/i,
-				type: "asset",
+				test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+				type: mode === 'production' ? 'asset' : 'asset/resource',
 			},
 			{
 				test: /\.(s[ac]|c)ss$/i,
@@ -59,6 +59,14 @@ module.exports = {
 					loader: "babel-loader",
 				},
 			},
+
+			{
+				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				loader: 'file-loader',
+				options: {
+				  name: '[name].[ext]'
+				}
+			 },
 
 		],
 	},
