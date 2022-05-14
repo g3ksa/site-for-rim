@@ -1,11 +1,13 @@
+import imageAbout from '../../img/about.jpg'
+
 function About(){
 	return (
 		<div className="about">
 			<div className="about__title">Что такое офшор?</div>
 			<div className="about__content">
-				<div className="about__img">
-					<img src="./about.jpg" alt="картинка"></img>
-				</div>
+				{/* <div className="about__img">
+					<img src={imageAbout} alt="картинка"></img>
+				</div> */}
 				<div className="about__text">
 					Офшор — это страна или территория, предоставляющая иностранным компаниям особые условия для ведения бизнеса.
 					Очень низкие или даже нулевые налоги, простые правила отчетности и управления компаний, возможность скрыть настоящих владельцев бизнеса.

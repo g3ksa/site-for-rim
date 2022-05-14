@@ -4,10 +4,10 @@
 function Header() {
   return (
     <header className="header">
-      <div className="container">
+      <div className="header__container">
         <div className="header__row">
           <div className="header__logo">
-            Офшоры и банки
+            икнаб <span>И</span> ырошфО
           </div>
           <div className="header__menu">
             <div className="menu__item">

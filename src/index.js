@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Header from './components/Header';
-import MainBlock from './components/MainBlock';
+import ReactDOM from 'react-dom';
 import './styles/style.scss';
+import { init } from './components/map/regions_districts';
+import { App } from './App';
 
-const wrapper = ReactDOM.createRoot(document.getElementById('wrapper'));
-wrapper.render(
+
+ReactDOM.render(
   <>
-    <Header />
-    <MainBlock />
-  </>
+    <App/>
+  </>,
+  document.getElementById('wrapper')
 );
+
+
+ymaps.ready(init);

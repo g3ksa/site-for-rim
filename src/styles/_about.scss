@@ -1,36 +1,40 @@
+@import 'static';
+
 .about{
 	position: relative;
 	padding-bottom: 75px;
 	margin-top: 105px;
-	border-radius: 10px;
-	background-color: rgb(36, 36, 36);
+	border-radius: $borderRadius;
+	background-color: $bg_block;
 	padding: 2rem;
 }
 
 .about__title{
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: $fzTitle;
 	font-weight: bold;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .about__content{
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
+	//align-items: center;
+	//flex-wrap: wrap;
+	flex: 1 0 50%;
 }
 
 .about__img img{
 	border-radius: 5px;
-	width: 20vw;
+	width: 100%;
 }
 
 .about__img{
 	margin: 0 3vw 0 0;
+	flex: 1 0 50%;
 }
 
 .about__text{
 	font-size: 1.2rem;
-	flex: 1 0;
-	text-align: justify;
+	text-align: center;
 }
