@@ -5,15 +5,9 @@
 	padding-bottom: 75px;
 	margin-top: 105px;
 	border-radius: $borderRadius;
-	background-color: $bg_block;
+	background-color: var(--bg-block);
 	padding: 2rem;
-}
-
-.about__title{
-	text-align: center;
-	font-size: $fzTitle;
-	font-weight: bold;
-	margin-bottom: 30px;
+	transition: background-color 0.5s
 }
 
 .about__content{

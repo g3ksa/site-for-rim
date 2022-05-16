@@ -12,4 +12,4 @@ function MainBlock(){
 		</div>
 	);
 }
-export default MainBlock;
+export {MainBlock};

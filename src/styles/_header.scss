@@ -1,20 +1,25 @@
+@import 'static';
+
 .header{
 	padding: 1.5rem 0;
 	position: sticky;
 	top: 0;
-	color
+	-webkit-backdrop-filter: blur(20px);
+  	backdrop-filter: blur(20px);
+	z-index: 5;
 }
 
 .header::after{
 	content: "";
 	position: absolute;
-	background-color: #252528;
+	background-color: var(--bg-block);
 	bottom: 0;
 	left: 50%;
 	height: 1px;
 	width: 90vw;
 	text-align: center;
 	transform: translateX(-50%);
+	transition: background-color 0.5s
 }
 
 .header__container{
@@ -69,13 +74,13 @@
 
 .menu__item a{
 	text-decoration: none;
-	color: #fff;
+	color: var(--fc-main);
 	transition: all .2s;
 	font-size: 1.5rem;
 }
  
-.menu__item a:hover{
-	color: pink;
+.menu__link:hover{
+	color: #d8aaaa;
 }
  
 .menu__item:not(:last-child){

@@ -1,24 +1,34 @@
 //import './Header.css';
 //import BurgerMenu from './burger_menu.js';
+import {CustomLink} from './CustomLink';
+import { ChangeTheme } from './ChangeTheme';
+import { Link } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__row">
           <div className="header__logo">
-            икнаб <span>И</span> ырошфО
+            <a href="/" className="header__logo">икнаб <span>И</span> ырошфО</a>
           </div>
           <div className="header__menu">
             <div className="menu__item">
-              <a href="#">статистика</a>
+              <CustomLink to="/stats" className="menu__link">Статистика</CustomLink>
             </div>
             <div className="menu__item">
-              <a href="#">источники</a>
+              <CustomLink to="/tasks" className="menu__link">Цели и задачи</CustomLink>
             </div>
             <div className="menu__item">
-              <a href="#">команда</a>
+              <CustomLink to="/team" className="menu__link">Команда</CustomLink>
             </div>
+            <div className="menu__item">
+              <CustomLink to="/sources" className="menu__link">Источники</CustomLink>
+            </div>
+            {/* <div className="login-btn">
+              <Link to="/login" className="btn">Login</Link>
+            </div> */}
+            <ChangeTheme />
           </div>
         </div>
       </div>
@@ -26,4 +36,4 @@ function Header() {
   );
 }
 
-export default Header;
+export { Header };

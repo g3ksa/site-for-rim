@@ -1,10 +1,11 @@
 @import 'static';
 
 .map__row{
-	background-color: $bg_block;
+	background-color: var(--bg-block);
 	border-radius: $borderRadius;
 	padding: 2rem;
 	margin-top: 20px;
+	transition: background-color 0.5s
 }
 
 .map__title{
