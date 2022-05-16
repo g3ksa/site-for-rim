@@ -16,7 +16,7 @@ const Login = () => {
 
 function login(){
 	if (document.querySelector('.login').value === 'throwdownyourfears' && document.querySelector('.password').value === 'ULyu4YLDj6EP4IPTcm5c'){
-		window.location.href = 'flag'
+		alert('zssoib u_4re_4dm1n3');
 	}
 }
 

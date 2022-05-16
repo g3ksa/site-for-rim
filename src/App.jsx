@@ -38,7 +38,7 @@ const App = () => {
 					<Route path="team" element={<Team />} />
 					<Route path="tasks" element={<Tasks />} />
 					<Route path="login" element={<Login />} />
-					<Route path="flag" element={<MainBlock />} />
+					<Route path="flag" element={<Flag />} />
 				</Route>
 			</Routes>
 		</>
