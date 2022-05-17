@@ -36,9 +36,39 @@ module.exports = {
 
 	module: {
 		rules: [
+			// {
+			// 	test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+			// 	type: mode === 'production' ? 'asset' : 'asset/resource',
+			// 	loader: 'file-loader',
+			// },
 			{
-				test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-				type: mode === 'production' ? 'asset' : 'asset/resource',
+				test: /\.(gif|png|jpe?g|svg|webp|ico)$/i,
+				use: [
+				'file-loader',
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							mozjpeg: {
+								progressive: true,
+							},
+							// optipng.enabled: false will disable optipng
+							optipng: {
+								enabled: false,
+							},
+							pngquant: {
+								quality: [0.65, 0.90],
+								speed: 4
+							},
+							gifsicle: {
+								interlaced: false,
+							},
+							// the webp option will enable WEBP
+							webp: {
+								quality: 75
+							}
+						}
+					},
+				]
 			},
 			{
 				test: /\.(s[ac]|c)ss$/i,
@@ -62,13 +92,12 @@ module.exports = {
 			},
 
 			{
-				test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+				test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
 				loader: 'file-loader',
 				options: {
 				  name: '[name].[ext]'
 				}
-			 },
-
+			},
 		],
 	},
 

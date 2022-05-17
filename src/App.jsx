@@ -7,38 +7,19 @@ import { Sources } from './pages/sources/Sources';
 import { Stats } from './pages/stats/Stats';
 import { Team } from './pages/team/Team';
 import { Layout } from './components/Layout';
-import { Admin } from './components/Admin';
-import { NotAdmin } from './components/NotAdmin';
-import { Login } from './components/Login';
 import { Tasks } from './pages/tasks/Tasks';
 import { Flag } from './components/Flag';
-
-const AdminYes = () => {
-	return (
-		<>
-			<Admin/>
-			<Link to="/login" className="btn">Login</Link>
-		</>
-	);
-}
-
-const isAdmin = () => {
-	return navigator.userAgent == 'admin' ? <AdminYes/> : <NotAdmin/>;
-}
-
 
 const App = () => {
 	return(
 		<>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={isAdmin()} />
+					<Route index element={<MainBlock />} />
 					<Route path="sources" element={<Sources />} />
 					<Route path="stats" element={<Stats />} />
 					<Route path="team" element={<Team />} />
 					<Route path="tasks" element={<Tasks />} />
-					<Route path="login" element={<Login />} />
-					<Route path="flag" element={<Flag />} />
 				</Route>
 			</Routes>
 		</>
