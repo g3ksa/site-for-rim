@@ -9,19 +9,22 @@ import { Team } from './pages/team/Team';
 import { Layout } from './components/Layout';
 import { Tasks } from './pages/tasks/Tasks';
 import { Flag } from './components/Flag';
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
 	return(
 		<>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<MainBlock />} />
-					<Route path="sources" element={<Sources />} />
-					<Route path="stats" element={<Stats />} />
-					<Route path="team" element={<Team />} />
-					<Route path="tasks" element={<Tasks />} />
-				</Route>
-			</Routes>
+			<AnimatePresence exitBeforeEnter>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<MainBlock />} />
+						<Route path="sources" element={<Sources />} />
+						<Route path="stats" element={<Stats />} />
+						<Route path="team" element={<Team />} />
+						<Route path="tasks" element={<Tasks />} />
+					</Route>
+				</Routes>
+			</AnimatePresence>
 		</>
 	)
 }

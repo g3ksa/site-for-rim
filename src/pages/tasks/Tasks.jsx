@@ -1,3 +1,5 @@
+import { AnimatedPage } from '../../components/AnimatedPage';
+
 const Tasks = () => {
 	return (
 		<div className="container">

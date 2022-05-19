@@ -14,17 +14,16 @@
 	position: absolute;
 	background-color: var(--bg-block);
 	bottom: 0;
-	left: 50%;
+	left: 20px;
+	right: 20px;
 	height: 1px;
-	width: 90vw;
 	text-align: center;
-	transform: translateX(-50%);
 	transition: background-color 0.5s
 }
 
 .header__container{
 	margin: 0 auto;
-	max-width: 90vw;
+	padding: 0 20px;
 }
 
 .header__logo{
@@ -36,11 +35,12 @@
 	font-weight: bold;
 	word-spacing: -1px;
 	letter-spacing: -5px;
-	unicode-bidi:bidi-override;
+	unicode-bidi:isolate-override;
    direction:rtl;
 	background-size: 300%;
 	background-position: -100%;
 	animation: background 6s infinite alternate;
+	text-decoration: none;
 }
 
 @keyframes background {

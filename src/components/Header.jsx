@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header__container">
         <div className="header__row">
           <div className="header__logo">
-            <a href="/" className="header__logo">икнаб <span>И</span> ырошфО</a>
+            <Link to="/" className="header__logo">икнаб <span>И</span> ырошфО</Link>
           </div>
           <div className="header__menu">
             <div className="menu__item">

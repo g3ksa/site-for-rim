@@ -12,6 +12,8 @@ export function init() {
 	});
 	map.controls.get('zoomControl').options.set({size: 'small'});
 
+	let opacity
+
 	let pane = new ymaps.pane.StaticPane(map, {
 		zIndex: 100, css: {
 			width: '100%', height: '100%', backgroundColor: '#252528', opacity: 0.2
