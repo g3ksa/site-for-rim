@@ -1,13 +1,5 @@
 @import 'static';
 
-.about{
-	padding-bottom: 75px;
-	margin-top: 105px;
-	border-radius: $borderRadius;
-	background-color: var(--bg-block);
-	padding: 2rem;
-	transition: background-color 0.5s
-}
 
 .about__content{
 	display: flex;

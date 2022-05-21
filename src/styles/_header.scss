@@ -1,4 +1,5 @@
 @import 'static';
+@import 'fonts';
 
 .header{
 	padding: 1.5rem 0;
@@ -27,6 +28,7 @@
 }
 
 .header__logo{
+	font-family: 'Gropled-Bold', sans-serif;
 	font-size: 3rem;
 	background: linear-gradient(90deg, rgba(255,196,108,1), rgba(216,170,170,1), rgba(109,230,255,1), rgba(242,90,255,1));
 	-webkit-background-clip: text;

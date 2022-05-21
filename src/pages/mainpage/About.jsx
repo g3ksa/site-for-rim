@@ -2,7 +2,7 @@ import imageAbout from '../../img/about.jpg'
 
 function About(){
 	return (
-		<div className="about">
+		<div className="about block">
 			<div className="about__title title">Что такое офшор?</div>
 			<div className="about__content">
 				{/* <div className="about__img">

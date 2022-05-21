@@ -1,9 +1,9 @@
-import {useState} from 'react';
+import {useState, useContext, useCallback} from 'react';
 import { motion } from "framer-motion";
 
+import { ThemeContext } from './ThemeProvider';
 import Moon  from '../img/moon.svg'
 import Sun from '../img/sun.svg'
-import { changeSrc } from '../pages/stats/Stats';
 import "../styles/style.scss";
 
 const spring = {
@@ -14,12 +14,11 @@ const spring = {
 
 const ChangeTheme = () => {
 	const [isOn, setIsOn] = useState(!localStorage.isOn ? true : localStorage.getItem("isOn") === 'true');
+	const { theme, updateTheme } = useContext(ThemeContext)
 
-	const toggleSwitch = () => {
+	const toggleSwitch = useCallback(() => {
 		setIsOn(!isOn);
-		if (document.querySelector('.stats__item')){
-			changeSrc()
-		}
+		updateTheme(theme === 'dark' ? 'light' : 'dark')
 		const html = document.querySelector('html');
 		if (html.classList.contains('light')){
 			html.classList.remove('light');
@@ -32,7 +31,8 @@ const ChangeTheme = () => {
 			localStorage.setItem('theme', 'light');
 			localStorage.setItem('isOn', 'false');
 		}
-	};
+	}, [theme])
+	
 
 	return (
 		<div className="change-theme__container" data-isOn={isOn} onClick={toggleSwitch}>
