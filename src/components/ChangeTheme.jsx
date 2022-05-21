@@ -37,7 +37,7 @@ const ChangeTheme = () => {
 	return (
 		<div className="change-theme__container" data-isOn={isOn} onClick={toggleSwitch}>
 			<motion.div className="change-theme__item" layout transition={spring} >
-				<img src={!localStorage.theme ? Moon : localStorage.getItem('theme') == 'dark' ? Moon : Sun}></img>
+				<img src={theme == 'dark' ? Moon : Sun}></img>
 			</motion.div>
 		</div>
 	);
