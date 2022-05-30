@@ -1,10 +1,11 @@
 .slide{
-	padding: 0 40px;
+	padding: 25px 50px;
 	box-sizing: border-box;
 	display: flex;
-	align-items: center;
+	//align-items: center;
 	justify-content: space-between;
 	min-height: 50%;
+
 	//margin: 0 20px;
 }
 
@@ -17,12 +18,15 @@
 
 .right{
 	flex: 1 0;
+	margin: 0 0 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .description{
 	font-size: 1.2rem;
-	text-align: center;
-	margin-left: 10px;
+	text-align: justify;
 }
 
 .swiper{
@@ -32,21 +36,39 @@
 .avatar{
 	img{
 		width: 10vw;
-		border-radius: 10px;
+		border-radius: 15px;
 		display: block;
 	}
 	
 	position: relative;
-	background-color: var(--bg-body);
-	border-radius: 10px;
-	
+	border-radius: 10px;	
+	transition: all 0.5s;
 }
 
 .fullname{
-	//margin-top: 10px;
-	font-size: 1.2rem;
-	text-align: center;
+	font-size: 1.5rem;
 	width: 100%;
-	z-index: 0;
-	margin: 10px 0;
+	margin: 0 0 10px 0;
+	font-weight: 700;
+}
+
+.links{
+	margin: 15px 0 0 0;
+}
+
+.link{
+	text-decoration: none;
+	color: var(--fc-main);
+	transition: color 0.5s;
+	&:not(:last-child){
+		margin-right: 10px;
+	}
+
+	&:hover > * {
+		color: var(--fc-links);
+		transform: scale(1.3);
+	}
+	& > *{
+		transition: transform .2s ease-in-out;
+	}
 }
