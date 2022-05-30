@@ -10,11 +10,12 @@ html{
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--bg-body);
-	transition: all 0.5s
+	background: var(--bg-body);
+	transition: background 0.5s
 }
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background: var(--scroll-track); 
+	background: var(--scroll-track);
+	transition: background 0.5s
 }
