@@ -10,7 +10,7 @@ export const PointItems = () => {
 
    return (
       <div>
-         <div className={styles.title}>Цели:</div>
+         <div className={styles.title}>Цель:</div>
          <ol>{'' || pointsEl}</ol>
       </div>
    );
