@@ -1,4 +1,4 @@
-.sources__item{
+.item{
 	text-align: center;
 	margin: 5vh 0 10px 1.5vw;
 	font-size: 1.2rem;
@@ -14,12 +14,10 @@
 		transform: translateX(-50%);
 		margin: 2vh 0 0 0;
 	}
-}
 
-
-
-.sources__item a{
-	font-size: 1.2rem;
-	text-decoration: none;
-	color: var(--fc-links);
+	a{
+		font-size: 1.2rem;
+		text-decoration: none;
+		color: var(--fc-links);
+	}
 }

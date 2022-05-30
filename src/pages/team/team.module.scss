@@ -1,0 +1,52 @@
+.slide{
+	padding: 0 40px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 50%;
+	//margin: 0 20px;
+}
+
+.left,
+.right{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.right{
+	flex: 1 0;
+}
+
+.description{
+	font-size: 1.2rem;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.swiper{
+	width: 100%;
+}
+
+.avatar{
+	img{
+		width: 10vw;
+		border-radius: 10px;
+		display: block;
+	}
+	
+	position: relative;
+	background-color: var(--bg-body);
+	border-radius: 10px;
+	
+}
+
+.fullname{
+	//margin-top: 10px;
+	font-size: 1.2rem;
+	text-align: center;
+	width: 100%;
+	z-index: 0;
+	margin: 10px 0;
+}

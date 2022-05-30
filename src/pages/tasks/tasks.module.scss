@@ -1,20 +1,17 @@
-@import 'static';
-
-.tasks__row{
+.row{
 	position: relative;
 	padding-bottom: 75px;
 	margin-top: 105px;
-	border-radius: $borderRadius;
+	border-radius: 10px;
 	background-color: var(--bg-block);
 	padding: 2rem;
 }
 
-.ol__item{
+.item{
 	margin: 5px 0 0 2vw;
 	font-size: 1.2rem;
 }
 
-.points__title,
-.tasks__title{
+.title{
 	font-size: 1.5rem;
 }

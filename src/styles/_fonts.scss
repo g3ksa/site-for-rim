@@ -23,11 +23,12 @@
 }
 
 @font-face {
-	font-family: 'Gropled-Bold';
-	src: url(../fonts/Gropled/Gropled-Bold.eot);
+	font-family: 'Gropled';
+	src: url('../fonts/Gropled/Gropled-Bold.eot');
 	src: local('Gropled-Bold'), local('Gropled-Bold'),
 		url('../fonts/Gropled/Gropled-Bold.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/Gropled/Gropled-Bold.woff') format('woff'),
+		url('../fonts/Gropled/Gropled-Bold.woff2') format('woff2'),
 		url('../fonts/Gropled/Gropled-Bold.ttf') format('truetype'),
 		url('../fonts/Gropled/Gropled-Bold.otf') format('opentype');
 	font-weight: 700;

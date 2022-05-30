@@ -1,10 +1,10 @@
 import { useState, useContext, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-import { ThemeContext } from './ThemeProvider';
-import Moon from '../img/moon.svg';
-import Sun from '../img/sun.svg';
-import '../styles/style.scss';
+import { ThemeContext } from '../ThemeProvider';
+import Moon from '../../img/moon.svg';
+import Sun from '../../img/sun.svg';
+import styles from './changeTheme.module.scss';
 
 const spring = {
    type: 'spring',
@@ -36,12 +36,8 @@ const ChangeTheme = () => {
    }, [theme]);
 
    return (
-      <div
-         className='change-theme__container'
-         data-isOn={isOn}
-         onClick={toggleSwitch}
-      >
-         <motion.div className='change-theme__item' layout transition={spring}>
+      <div className={styles.container} data-isOn={isOn} onClick={toggleSwitch}>
+         <motion.div className={styles.item} layout transition={spring}>
             <img src={theme == 'dark' ? Moon : Sun}></img>
          </motion.div>
       </div>
