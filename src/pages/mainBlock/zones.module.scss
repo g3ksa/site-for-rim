@@ -1,0 +1,16 @@
+.item{
+	&:not(:last-child){
+		margin: 0 0 10px;
+	}
+}
+
+.subtitle{
+	font-size: 1.7rem;
+}
+
+.text{
+	box-sizing: border-box;
+	padding: 0 0 0 10px;
+	color: var(--fc-main);
+	font-size: 1.2rem;
+}
