@@ -9,6 +9,7 @@ html{
 	padding: 0;
 	color: var(--fc-main);
 	font-size: 14px;
+	box-sizing: border-box;
 }
 
 ymaps{
@@ -22,6 +23,20 @@ body {
 	transition: background-color 0.5s
 }
 
+html, body {
+	height: 100%;
+}
+
 .active-link{
 	color: var(--fc-links);
+}
+
+#wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+	& > div{
+		flex: 1 1 auto;
+	}
 }
