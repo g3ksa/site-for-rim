@@ -22,14 +22,13 @@ export const StatItems = ({ theme }) => {
          {'' ||
             statsSrc.map((item, index) => (
                <MotionBlock
-                  className='stats__block block'
                   key={index}
                   initial='hidden'
                   whileInView='visible'
                   viewport={{ amount: 0.1 }}
                   variants={statAnimation}
                >
-                  <Title>{item.title}</Title>
+                  <Title text={item.title}></Title>
                   <div className={styles.item}>
                      <img
                         src={theme == 'dark' ? item.darkImg : item.lightImg}

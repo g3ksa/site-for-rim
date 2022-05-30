@@ -6,7 +6,7 @@ import { about } from './data';
 function About() {
    return (
       <Block>
-         <Title>{about.title}</Title>
+         <Title text={about.title}></Title>
          <div className={styles.content}>
             <div className={styles.text}>{about.text}</div>
          </div>

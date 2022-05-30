@@ -12,7 +12,7 @@ function Maps() {
    });
    return (
       <Block>
-         <Title>{map.title}</Title>
+         <Title text={map.title}></Title>
          <div id='map' className={styles.item} />
       </Block>
    );
