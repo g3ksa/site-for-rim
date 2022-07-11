@@ -1,0 +1,45 @@
+.block {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: translateX(-110%);
+	width: 40%;
+	background: linear-gradient(90deg, rgba(255,196,108,1), rgba(216,170,170,1), rgba(109,230,255,1), rgba(242,90,255,1));
+	color: #17171a;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 15px;
+	box-sizing: border-box;
+	padding: 15px;
+	background-size: 300%;
+	background-position: -100%;
+	animation: background 10s infinite alternate;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& > a{
+		text-decoration: none;
+	}
+}
+
+.button{
+	margin: 15px 0 0 0;
+	background-color: var(--bg-block);
+	padding :10px 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--fc-main);
+	transition: all .5s;
+}
+
+@keyframes background {
+	from {
+		background-position: 0%;
+	}
+	to{
+		background-position: 100%;
+	}
+}

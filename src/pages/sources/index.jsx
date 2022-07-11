@@ -71,6 +71,22 @@ function Sources() {
                      </a>{' '}
                      (дата обращения: 19.04.2022)
                   </li>
+                  <li className={styles.item}>
+                     Все иконки взяты из open-source библиотеки react-icons:
+                     <br />
+                     <a href='https://react-icons.github.io/react-icons'>
+                        https://react-icons.github.io/react-icons
+                     </a>{' '}
+                     (дата обращения: 10.05.2022)
+                  </li>
+                  <li className={styles.item}>
+                     Интерактивная карта создана с использованием API Yandex
+                     Maps:{' '}
+                     <a href='https://yandex.ru/dev/maps/?p=realty'>
+                        https://yandex.ru/dev/maps/?p=realty
+                     </a>{' '}
+                     (дата обращения: 10.04.2022)
+                  </li>
                </ol>
             </div>
          </Block>

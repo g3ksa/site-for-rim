@@ -8,11 +8,11 @@ import { ChangeTheme } from '../changeTheme';
 import styles from './header.module.scss';
 
 const scroll = Scroll.animateScroll;
+export const scrollToTop = () => {
+   scroll.scrollToTop();
+};
 
 const Header = () => {
-   const scrollToTop = () => {
-      scroll.scrollToTop();
-   };
    return (
       <header className={styles.header}>
          <div className={styles.container}>
@@ -23,6 +23,15 @@ const Header = () => {
                   </Link>
                </div>
                <div className={styles.menu}>
+                  <div className={styles.item}>
+                     <CustomLink
+                        to='/dictionary'
+                        className={styles.link}
+                        onClick={scrollToTop}
+                     >
+                        Словарь
+                     </CustomLink>
+                  </div>
                   <div className={styles.item}>
                      <CustomLink
                         to='/stats'

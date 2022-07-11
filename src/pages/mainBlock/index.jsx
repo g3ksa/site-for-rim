@@ -3,6 +3,7 @@ import { Container } from '../../components/container';
 import About from './About';
 import Maps from './Maps';
 import { Zones } from './Zones';
+import { RiskAddon } from './RiskAddon';
 
 function MainBlock() {
    return (
@@ -10,6 +11,7 @@ function MainBlock() {
          <About />
          <Zones />
          <Maps />
+         <RiskAddon />
       </Container>
    );
 }

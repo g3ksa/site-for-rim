@@ -1,0 +1,78 @@
+.inner{
+	font-size: 1.2rem;
+	transition: all .5s;
+	position: relative;
+}
+
+.goBack{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+
+.mainText{
+	text-align: justify;
+}
+
+.subText{
+	position: relative;
+	&::after{
+		content: "";
+		bottom: -30px;
+		background: var(--fc-main);
+		height: 1px;
+		width: 30%;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		display: block;
+		position: absolute;
+		transition: background .5s;
+	}
+}
+
+.listTitle{
+	margin: 60px 0 0 0;
+	font-weight: bold;
+}
+
+.listItem{
+	&:not(:last-child){
+		margin: 0 0 10px 0;
+	}
+}
+
+.itemTitle{
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
+
+.itemText{
+	box-sizing: border-box;
+	padding: 0 0 0 20px;
+	text-align: justify;
+}
+
+.items{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.item{
+	& img{
+		display: block;
+	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.subtext{
+	font-size: 1.2rem;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 15px;
+}

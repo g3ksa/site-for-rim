@@ -1,8 +1,77 @@
-.item {
+.map {
 	width: 100%;
 	height: 60vh;
+	position: relative;
 	
 	ymaps{
 		border-radius: 10px;
 	}
+}
+
+.legend{
+	transition: background-color .5s;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 15px;
+	background-color: var(--bg-block);
+	border-radius: 10px;
+	height: 100px;
+	width: 200px;
+	margin-top: 5px;
+	flex-shrink: 0;
+}
+
+.list{
+	transition: all .5s;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-block);
+	max-width: 200px;
+	overflow: visible;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	&::-webkit-scrollbar-track{
+		border-radius: 10px;
+	}
+
+	& div:not(:last-child){
+		margin-bottom: 5px;
+	}
+}
+
+.controls{
+	position: absolute;
+	bottom: 3px;
+	top: 3px;
+	right: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	z-index: 1000;
+}
+
+.color{
+	height: 10px;
+	width: 10px;
+	border-radius: 2px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.text{
+	text-decoration: none;
+	cursor: pointer;
+	transition: color .2s;
+	&:hover{
+		color: var(--fc-links);
+	}
+}
+
+.close > *{
+	width:20px;
+	height:20px;
+	color: red;
+	cursor: pointer;
 }

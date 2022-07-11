@@ -7,6 +7,8 @@ import { Stats } from './pages/stats';
 import { Team } from './pages/team';
 import { Layout } from './components/Layout';
 import { Tasks } from './pages/tasks';
+import { Dictionary } from './pages/dictionary/';
+import { Risks } from './pages/risks';
 
 const App = () => {
    return (
@@ -18,6 +20,8 @@ const App = () => {
                <Route path='stats' element={<Stats />} />
                <Route path='team' element={<Team />} />
                <Route path='tasks' element={<Tasks />} />
+               <Route path='dictionary' element={<Dictionary />} />
+               <Route path='risks' element={<Risks />}></Route>
             </Route>
          </Routes>
       </>
